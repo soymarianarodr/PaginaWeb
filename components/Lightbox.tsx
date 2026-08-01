@@ -72,6 +72,10 @@ export default function Lightbox({
         />
       </motion.figure>
 
+      {/* Iconos SVG inline en lugar de caracteres: los glifos ‹ › de la
+          Helvetica Neue Condensed Black miden ~12px y se dibujan como una
+          astilla que parece una flecha cortada; el SVG es idéntico en
+          cualquier máquina, sin depender de la fuente */}
       <button
         className={`${styles.control} ${styles.prev}`}
         onClick={(e) => {
@@ -80,7 +84,16 @@ export default function Lightbox({
         }}
         aria-label="Imagen anterior"
       >
-        ‹
+        <svg viewBox="0 0 24 40" aria-hidden="true" focusable="false">
+          <path
+            d="M19 4 L6 20 L19 36"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </button>
       <button
         className={`${styles.control} ${styles.next}`}
@@ -90,7 +103,16 @@ export default function Lightbox({
         }}
         aria-label="Imagen siguiente"
       >
-        ›
+        <svg viewBox="0 0 24 40" aria-hidden="true" focusable="false">
+          <path
+            d="M5 4 L18 20 L5 36"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </button>
       <button
         ref={closeRef}
@@ -101,7 +123,15 @@ export default function Lightbox({
         }}
         aria-label="Cerrar visor de imágenes"
       >
-        ✕
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path
+            d="M6 6 L26 26 M26 6 L6 26"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+          />
+        </svg>
       </button>
     </motion.div>,
     document.body,
