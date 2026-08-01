@@ -1,12 +1,11 @@
 'use client';
 
-import { forwardRef } from 'react';
 import styles from './Contact.module.css';
 
-// Última sección del sitio; se llega con scroll suave desde el botón CONTACT.
-const Contact = forwardRef<HTMLElement>(function Contact(_props, ref) {
+// Vista independiente: se muestra solo al pulsar CONTACT (nunca por scroll).
+export default function Contact() {
   return (
-    <section ref={ref} id="contact" className={styles.contact} aria-label="Contacto">
+    <section className={styles.contact} aria-label="Contacto">
       <a
         className={styles.email}
         href="mailto:MARIANACRODRIGUEZ@GMAIL.COM"
@@ -17,6 +16,4 @@ const Contact = forwardRef<HTMLElement>(function Contact(_props, ref) {
       <p className={styles.alias}>MARIROXX..</p>
     </section>
   );
-});
-
-export default Contact;
+}

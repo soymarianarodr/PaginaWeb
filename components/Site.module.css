@@ -5,13 +5,20 @@
 
 .main {
   padding-top: var(--header-h);
+  /* ancla para los elementos salientes de AnimatePresence popLayout */
+  position: relative;
 }
 
+/* La home cabe exacta en el viewport y no scrollea: el carrusel se ancla
+   abajo (margen inferior del mockup ~4,7cm ≈ 6.9vw) y el hueco grande
+   header → carrusel lo absorbe el espacio flexible restante, así nunca
+   desborda en pantallas bajas */
 .gallery {
-  /* separación header → carrusel del mockup: ~12,74cm ≈ 19vw, acotada para
-     que no desborde en pantallas bajas; margen inferior ~4,7cm ≈ 6.9vw */
-  padding-top: min(19vw, 26vh);
-  padding-bottom: min(6.9vw, 10vh);
-  /* el contacto empieza siempre por debajo del pliegue */
-  min-height: calc(100vh - var(--header-h));
+  height: calc(100vh - var(--header-h));
+  height: calc(100dvh - var(--header-h));
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: min(6.9vw, 12vh);
 }
