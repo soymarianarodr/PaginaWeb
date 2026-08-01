@@ -47,7 +47,12 @@ export default function Header({ label, onNavClick }: HeaderProps) {
     fit();
     window.addEventListener('resize', fit);
     document.fonts?.ready.then(fit).catch(() => {});
-    return () => window.removeEventListener('resize', fit);
+    // re-mide cuando cualquier fuente (p. ej. la woff2 propia) termina de cargar
+    document.fonts?.addEventListener('loadingdone', fit);
+    return () => {
+      window.removeEventListener('resize', fit);
+      document.fonts?.removeEventListener('loadingdone', fit);
+    };
   }, [fit]);
 
   // Publica la altura real del encabezado como --header-h para que el

@@ -1,17 +1,12 @@
-/*
-  Cuando se disponga del archivo de la fuente original, colocarlo en
-  /public/fonts/ y descomentar este bloque. El font stack global ya la
-  referencia por nombre, así que no hay que tocar nada más.
-
-  @font-face {
-    font-family: 'Helvetica Neue Condensed Black';
-    src: url('/fonts/HelveticaNeueCondensedBlack.woff2') format('woff2'),
-         url('/fonts/HelveticaNeueCondensedBlack.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-  }
-*/
+/* Fuente original del diseño, extraída del TTC de Helvetica Neue.
+   El font stack global la toma por nombre; Archivo Black queda de fallback. */
+@font-face {
+  font-family: 'Helvetica Neue Condensed Black';
+  src: url('/fonts/HelveticaNeueCondensedBlack.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   /* Mockup de referencia: lienzo de 67,7cm de ancho → 1cm ≈ 1.477vw */
