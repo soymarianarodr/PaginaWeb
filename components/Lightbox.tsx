@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 import styles from './Lightbox.module.css';
 
@@ -39,7 +40,12 @@ export default function Lightbox({
     return () => window.removeEventListener('keydown', onKey);
   });
 
-  return (
+  // Portal a <body>: la vista de detalle es un subárbol animado por Framer
+  // Motion y un ancestro con transform se convertiría en el containing block
+  // del overlay fixed, recortando los controles. En body, fixed = viewport.
+  // El overlay solo anima opacity (nunca transform); el scale de entrada va
+  // únicamente en el frame de la imagen.
+  return createPortal(
     <motion.div
       className={styles.overlay}
       role="dialog"
@@ -97,6 +103,7 @@ export default function Lightbox({
       >
         ✕
       </button>
-    </motion.div>
+    </motion.div>,
+    document.body,
   );
 }

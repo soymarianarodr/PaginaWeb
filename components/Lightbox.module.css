@@ -23,10 +23,11 @@
   object-fit: contain;
 }
 
-/* Controles siempre completos dentro del viewport: offsets con mínimo de
-   16px del borde y sin transforms */
+/* Controles siempre completos dentro del viewport: absolute respecto al
+   overlay (que es fixed a viewport vía portal), mínimo 16px del borde y
+   sin transforms en toda su cadena de ancestros */
 .control {
-  position: fixed;
+  position: absolute;
   color: #fff;
   opacity: 0.4;
   line-height: 1;
