@@ -8,27 +8,29 @@
   place-items: center;
 }
 
-/* La imagen ampliada ocupa un espacio central destacado, no toda la pantalla */
+/* La imagen ampliada ocupa un espacio central destacado, no toda la
+   pantalla; el segundo término del min() reserva sitio a las flechas */
 .frame {
-  max-width: 78vw;
+  max-width: min(78vw, calc(100vw - 176px));
   max-height: 78vh;
 }
 
 .frame img {
-  max-width: 78vw;
+  max-width: min(78vw, calc(100vw - 176px));
   max-height: 78vh;
   width: auto;
   height: auto;
   object-fit: contain;
 }
 
+/* Controles siempre completos dentro del viewport: offsets con mínimo de
+   16px del borde y sin transforms */
 .control {
   position: fixed;
   color: #fff;
   opacity: 0.4;
-  font-size: clamp(30px, 3.2vw, 60px);
   line-height: 1;
-  padding: 0.3em;
+  padding: 8px;
   transition: opacity 0.2s;
   z-index: 51;
 }
@@ -38,20 +40,22 @@
   opacity: 1;
 }
 
+.prev,
+.next {
+  top: calc(50% - 0.75em);
+  font-size: clamp(28px, 3vw, 52px);
+}
+
 .prev {
-  left: max(8px, 2vw);
-  top: 50%;
-  transform: translateY(-50%);
+  left: max(16px, 1.5vw);
 }
 
 .next {
-  right: max(8px, 2vw);
-  top: 50%;
-  transform: translateY(-50%);
+  right: max(16px, 1.5vw);
 }
 
 .close {
-  top: max(8px, 2vh);
-  right: max(8px, 2vw);
-  font-size: clamp(24px, 2.2vw, 42px);
+  top: max(16px, 2vh);
+  right: max(16px, 1.5vw);
+  font-size: clamp(22px, 2.2vw, 40px);
 }

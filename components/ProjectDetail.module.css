@@ -4,21 +4,25 @@
 
 .hero {
   position: relative;
-  height: min(72vh, calc(100vh - var(--header-h) - 24px));
-  min-height: 320px;
-  cursor: pointer;
 }
 
+/* Imagen del mockup: 30,57cm sobre 55,1cm útiles ≈ 55% del ancho útil,
+   centrada; el min() acota su altura para que imagen + texto quepan en
+   pantallas normales */
 .heroMedia {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  width: min(55%, calc((100vh - var(--header-h) - 180px) * (30.57 / 20.44)));
+  min-width: min(320px, 100%);
+  aspect-ratio: 30.57 / 20.44;
+  margin: 0 auto;
   overflow: hidden;
   background: #111;
-  transition: filter 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
 }
 
 .heroImg {
   object-fit: cover;
+  transition: filter 0.5s ease, opacity 0.5s ease;
 }
 
 /* Texto expandido: la imagen pasa a escala de grises y baja su opacidad
@@ -28,12 +32,15 @@
   opacity: 0.3;
 }
 
+/* Nombre + descripción alineados al mismo margen izquierdo que el título
+   y corriendo de margen a margen (el padre .detail ya aporta --page-margin);
+   el bloque cruza por delante de la imagen centrada */
 .textBlock {
   position: absolute;
   left: 0;
+  right: 0;
   bottom: 0;
-  max-width: min(920px, 92%);
-  padding: clamp(16px, 2.5vw, 40px);
+  z-index: 2;
   cursor: default;
 }
 
@@ -42,7 +49,8 @@
   text-transform: uppercase;
   color: #fff;
   line-height: 1;
-  margin-bottom: 0.4em;
+  /* separación nombre → descripción del mockup: 1,26cm ≈ 1.9vw */
+  margin-bottom: 1.9vw;
 }
 
 .description {

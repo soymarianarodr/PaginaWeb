@@ -26,23 +26,30 @@ export default function ProjectDetail({ project, layoutId }: ProjectDetailProps)
       transition={{ duration: 0.35 }}
       aria-label={`Proyecto ${project.name}`}
     >
-      {/* Clic en la imagen: abre el lightbox; si el texto está expandido,
-          el clic fuera del bloque de texto lo colapsa primero */}
+      {/* Clic en la imagen: abre el lightbox; con el texto expandido,
+          cualquier clic fuera del bloque de texto lo colapsa primero */}
       <div
         className={styles.hero}
-        onClick={() => (expanded ? setExpanded(false) : setLightboxIndex(0))}
+        onClick={() => expanded && setExpanded(false)}
       >
         <motion.div
           layoutId={layoutId}
-          className={`${styles.heroMedia} ${expanded ? styles.heroDimmed : ''}`}
+          className={styles.heroMedia}
+          onClick={(e) => {
+            e.stopPropagation();
+            if (expanded) setExpanded(false);
+            else setLightboxIndex(0);
+          }}
         >
+          {/* el dimmed va en la <img>, no en el motion.div: framer escribe
+              opacity inline en el contenedor con layoutId y pisaría la clase */}
           <Image
             src={project.images[0]}
             alt={`${project.name} — imagen principal`}
             fill
             priority
             sizes="100vw"
-            className={styles.heroImg}
+            className={`${styles.heroImg} ${expanded ? styles.heroDimmed : ''}`}
           />
         </motion.div>
 
