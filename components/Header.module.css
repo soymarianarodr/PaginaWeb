@@ -1,0 +1,57 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: #000;
+  /* margen superior del mockup: ~4.7cm ≈ 7vh */
+  padding: clamp(20px, 7vh, 90px) var(--page-margin) clamp(6px, 0.8vw, 16px);
+}
+
+.inner {
+  position: relative;
+}
+
+/* Medidor invisible a tamaño fijo; comparte fuente y tracking con el título */
+.measure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: 100px;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.title {
+  /* fallback hasta la primera medición; el valor real llega inline en px */
+  font-size: 7.2vw;
+  line-height: 0.92;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  font-weight: 900;
+}
+
+.navButton {
+  display: block;
+  /* separación título → botón: 1,26cm ≈ 1.9vw */
+  margin-top: 1.9vw;
+  /* fallback; el valor real es titleSize * 44/180 */
+  font-size: 1.75vw;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.01em;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+
+.navButton:hover {
+  opacity: 0.65;
+}

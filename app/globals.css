@@ -1,0 +1,80 @@
+/*
+  Cuando se disponga del archivo de la fuente original, colocarlo en
+  /public/fonts/ y descomentar este bloque. El font stack global ya la
+  referencia por nombre, así que no hay que tocar nada más.
+
+  @font-face {
+    font-family: 'Helvetica Neue Condensed Black';
+    src: url('/fonts/HelveticaNeueCondensedBlack.woff2') format('woff2'),
+         url('/fonts/HelveticaNeueCondensedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+*/
+
+:root {
+  /* Mockup de referencia: lienzo de 67,7cm de ancho → 1cm ≈ 1.477vw */
+  --fs-button: clamp(20px, 3.07vw, 59px);
+  --fs-body: clamp(17px, 2.08vw, 40px);
+
+  /* Margen lateral de página: 6,3cm ≈ 9.3vw — comparten título, botón,
+     carrusel y contacto */
+  --page-margin: 9.3vw;
+
+  /* Carrusel: 3 tarjetas llenan el ancho útil con 2 separaciones de
+     1,72cm ≈ 2.54vw */
+  --carousel-gap: 2.54vw;
+  --card-w: calc((100vw - 2 * var(--page-margin) - 2 * var(--carousel-gap)) / 3);
+
+  --font-stack: 'Helvetica Neue Condensed Black', 'HelveticaNeue-CondensedBlack',
+    var(--font-archivo, 'Archivo Black'), 'Oswald', sans-serif;
+
+  /* Estimación inicial de la altura del encabezado fijo; el Header publica
+     la altura real medida (px) en cuanto monta */
+  --header-h: calc(7vh + 11vw);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background: #000;
+  color: #fff;
+  font-family: var(--font-stack);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: #fff;
+  color: #000;
+}

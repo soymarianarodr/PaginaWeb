@@ -1,0 +1,99 @@
+.detail {
+  padding: clamp(12px, 2vw, 40px) var(--page-margin) clamp(32px, 6vh, 96px);
+}
+
+.hero {
+  position: relative;
+  height: min(72vh, calc(100vh - var(--header-h) - 24px));
+  min-height: 320px;
+  cursor: pointer;
+}
+
+.heroMedia {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #111;
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+.heroImg {
+  object-fit: cover;
+}
+
+/* Texto expandido: la imagen pasa a escala de grises y baja su opacidad
+   para que la descripción superpuesta sea legible */
+.heroDimmed {
+  filter: grayscale(1);
+  opacity: 0.3;
+}
+
+.textBlock {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: min(920px, 92%);
+  padding: clamp(16px, 2.5vw, 40px);
+  cursor: default;
+}
+
+.projectName {
+  font-size: var(--fs-button);
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.4em;
+}
+
+.description {
+  font-size: var(--fs-body);
+  line-height: 1.25;
+  color: #fff;
+}
+
+.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.viewMore {
+  margin-top: 0.5em;
+  font-size: calc(var(--fs-body) * 0.75);
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.7;
+  letter-spacing: 0.04em;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+
+.viewMore:hover {
+  opacity: 1;
+}
+
+.thumbs {
+  display: flex;
+  gap: clamp(10px, 1.2vw, 24px);
+  margin-top: clamp(14px, 2vh, 28px);
+}
+
+.thumb {
+  flex: 1 1 0;
+  padding: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #111;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.thumb:hover img {
+  opacity: 0.75;
+}

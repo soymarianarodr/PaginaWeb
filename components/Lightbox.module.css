@@ -1,0 +1,57 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  /* el contenido de fondo queda visible pero atenuado */
+  background: rgba(0, 0, 0, 0.78);
+  display: grid;
+  place-items: center;
+}
+
+/* La imagen ampliada ocupa un espacio central destacado, no toda la pantalla */
+.frame {
+  max-width: 78vw;
+  max-height: 78vh;
+}
+
+.frame img {
+  max-width: 78vw;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.control {
+  position: fixed;
+  color: #fff;
+  opacity: 0.4;
+  font-size: clamp(30px, 3.2vw, 60px);
+  line-height: 1;
+  padding: 0.3em;
+  transition: opacity 0.2s;
+  z-index: 51;
+}
+
+.control:hover,
+.control:focus-visible {
+  opacity: 1;
+}
+
+.prev {
+  left: max(8px, 2vw);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: max(8px, 2vw);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.close {
+  top: max(8px, 2vh);
+  right: max(8px, 2vw);
+  font-size: clamp(24px, 2.2vw, 42px);
+}

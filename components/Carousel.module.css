@@ -1,0 +1,42 @@
+/* La retícula base son 3 tarjetas dentro de los márgenes de página; al
+   desplazarse, las tarjetas asoman por fuera (sin overflow hidden aquí:
+   el recorte lo hace el overflow-x del documento) */
+.viewport {
+  width: 100%;
+  padding: 0 var(--page-margin);
+  /* el navegador gestiona el scroll vertical; el horizontal es nuestro */
+  touch-action: pan-y;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: var(--card-w);
+  /* margen (no gap) para que el ancho de cada copia sea exacto en el loop */
+  margin-right: var(--carousel-gap);
+  padding: 0;
+}
+
+.cardMedia {
+  width: 100%;
+  /* proporción de tarjeta del mockup: 17,27cm × 11,49cm (apaisada) */
+  aspect-ratio: 17.27 / 11.49;
+  overflow: hidden;
+  background: #111;
+}
+
+.cardMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.card:hover .cardMedia img {
+  opacity: 0.8;
+}
