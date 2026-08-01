@@ -1,17 +1,22 @@
+/* Composición fija del PDF: header + imagen + texto caben en el viewport
+   sin scroll; la imagen arranca ~2vh bajo el header */
 .detail {
-  padding: clamp(12px, 2vw, 40px) var(--page-margin) clamp(32px, 6vh, 96px);
+  height: calc(100vh - var(--header-h));
+  height: calc(100dvh - var(--header-h));
+  overflow: hidden;
+  padding: 2vh var(--page-margin) 0;
 }
 
 .hero {
   position: relative;
 }
 
-/* Imagen del mockup: 30,57cm sobre 55,1cm útiles ≈ 55% del ancho útil,
-   centrada; el min() acota su altura para que imagen + texto quepan en
-   pantallas normales */
+/* Imagen del mockup: 55% del ancho útil, aspect 30,57/20,44 (≈3:2),
+   centrada; el segundo término del min() la encoge en pantallas bajas
+   para que su borde inferior quede a ~12.3vh del fondo del viewport */
 .heroMedia {
   position: relative;
-  width: min(55%, calc((100vh - var(--header-h) - 180px) * (30.57 / 20.44)));
+  width: min(55%, calc((100dvh - var(--header-h) - 2vh - 12.3vh) * (30.57 / 20.44)));
   min-width: min(320px, 100%);
   aspect-ratio: 30.57 / 20.44;
   margin: 0 auto;
@@ -79,29 +84,4 @@
 
 .viewMore:hover {
   opacity: 1;
-}
-
-.thumbs {
-  display: flex;
-  gap: clamp(10px, 1.2vw, 24px);
-  margin-top: clamp(14px, 2vh, 28px);
-}
-
-.thumb {
-  flex: 1 1 0;
-  padding: 0;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background: #111;
-}
-
-.thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.3s;
-}
-
-.thumb:hover img {
-  opacity: 0.75;
 }

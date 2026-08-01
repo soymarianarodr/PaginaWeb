@@ -84,19 +84,6 @@ export default function ProjectDetail({ project, layoutId }: ProjectDetailProps)
         </motion.div>
       </div>
 
-      <div className={styles.thumbs}>
-        {project.images.map((src, i) => (
-          <button
-            key={src}
-            className={styles.thumb}
-            onClick={() => setLightboxIndex(i)}
-            aria-label={`Ampliar imagen ${i + 1} de ${project.name}`}
-          >
-            <img src={src} alt="" draggable={false} />
-          </button>
-        ))}
-      </div>
-
       <AnimatePresence>
         {lightboxIndex !== null && (
           <Lightbox

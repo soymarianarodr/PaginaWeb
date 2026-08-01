@@ -8,16 +8,17 @@
   place-items: center;
 }
 
-/* La imagen ampliada ocupa un espacio central destacado, no toda la
-   pantalla; el segundo término del min() reserva sitio a las flechas */
+/* Tamaño del mockup: 1220×809 sobre 1920×1080 → 63.5vw × 75vh, centrada;
+   el segundo término del min() reserva sitio a las flechas en pantallas
+   angostas */
 .frame {
-  max-width: min(78vw, calc(100vw - 176px));
-  max-height: 78vh;
+  max-width: min(63.5vw, calc(100vw - 176px));
+  max-height: 75vh;
 }
 
 .frame img {
-  max-width: min(78vw, calc(100vw - 176px));
-  max-height: 78vh;
+  max-width: min(63.5vw, calc(100vw - 176px));
+  max-height: 75vh;
   width: auto;
   height: auto;
   object-fit: contain;
