@@ -5,3 +5,7 @@ out
 next-env.d.ts
 *.tsbuildinfo
 .DS_Store
+
+# PDFs fuente de los proyectos (148 MB): se extraen a public/projects/<slug>/;
+# no se versionan para no inflar el repo.
+pdfs/

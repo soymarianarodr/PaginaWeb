@@ -14,51 +14,56 @@ export interface Project {
 // 2. Actualiza name, description y el array images de cada entrada.
 export const projects: Project[] = [
   {
-    name: 'AURORA',
-    slug: 'aurora',
+    name: 'CICLO',
+    slug: 'ciclo',
+    // TODO: descripción provisional — el cliente enviará el texto final.
     description:
-      'Aurora es una serie editorial que explora la luz como materia narrativa. ' +
-      'Cada pieza parte de fotografías de larga exposición intervenidas digitalmente, ' +
-      'construyendo atmósferas que oscilan entre lo documental y lo onírico. ' +
-      'El proyecto se desarrolló durante seis meses e incluye dirección de arte, ' +
-      'diseño de la publicación impresa y una instalación lumínica presentada en Caracas. ' +
-      'La paleta reducida y la tipografía condensada refuerzan la tensión entre silencio y estallido.',
+      'Ciclo es el concepto para una tienda de jabones biodegradables, ' +
+      'donde el diseño del espacio acompaña una propuesta consciente con el entorno.',
     images: [
-      '/projects/aurora/01.svg',
-      '/projects/aurora/02.svg',
-      '/projects/aurora/03.svg',
+      '/projects/ciclo/01.jpg',
+      '/projects/ciclo/02.jpg',
+      '/projects/ciclo/03.jpg',
+      '/projects/ciclo/04.jpg',
     ],
   },
   {
-    name: 'BRUTAL',
-    slug: 'brutal',
+    name: 'ALTER EGO',
+    slug: 'alter-ego',
     description:
-      'Brutal es un sistema de identidad para un colectivo de arquitectura emergente. ' +
-      'El lenguaje visual toma prestada la crudeza del hormigón: tipografías pesadas, ' +
-      'retículas expuestas y un blanco y negro sin concesiones. ' +
-      'El sistema abarca papelería, señalética, plantillas editoriales y presencia digital, ' +
-      'todo articulado sobre una única familia tipográfica condensada. ' +
-      'La identidad fue reconocida con una mención en la bienal regional de diseño.',
+      'Una habitación como la extensión física de una personalidad compleja. ' +
+      'Este espacio explora nuestras propias contradicciones: lo serio y lo divertido, ' +
+      'lo ordenado y lo caótico, lo intelectual y lo emocional. ' +
+      'En Alter Ego conviven las distintas versiones de un mismo ser. ' +
+      'Mientras la crudeza del hormigón representa la estructura y el control, ' +
+      'el color y la selección de piezas de mobiliario revelan un lado más libre, creativo y emocional. ' +
+      'Para materializar esta dualidad, además de las piezas elegidas, ' +
+      'se diseñaron específicamente una serie de detalles a medida con temática de globos. ' +
+      'Estos acentos personalizados se integran al entorno inyectando de forma sutil ' +
+      'esa dosis de juego, ligereza y diversión que completa la identidad de la persona.',
     images: [
-      '/projects/brutal/01.svg',
-      '/projects/brutal/02.svg',
-      '/projects/brutal/03.svg',
+      '/projects/alter-ego/01.jpg',
+      '/projects/alter-ego/02.jpg',
+      '/projects/alter-ego/03.jpg',
+      '/projects/alter-ego/04.jpg',
+      '/projects/alter-ego/05.jpg',
+      '/projects/alter-ego/06.jpg',
+      '/projects/alter-ego/07.jpg',
+      '/projects/alter-ego/08.jpg',
     ],
   },
   {
-    name: 'CROMA',
-    slug: 'croma',
+    name: 'ENGRAMA',
+    slug: 'engrama',
+    // TODO: descripción provisional — el cliente enviará el texto final.
     description:
-      'Croma es una investigación visual sobre el color como territorio emocional. ' +
-      'A través de collages digitales y pintura escaneada, la serie construye paisajes ' +
-      'abstractos donde cada tono funciona como personaje. ' +
-      'El proyecto incluyó la dirección de arte de una campaña para una marca textil ' +
-      'y una serie limitada de impresiones giclée. ' +
-      'Las piezas dialogan entre lo táctil y lo digital, borrando la frontera entre ambos.',
+      'Engrama es un objeto-cápsula pensado para guardar memorias fotográficas, ' +
+      'un dispositivo que convierte los recuerdos en una pieza física para conservar y revisitar.',
     images: [
-      '/projects/croma/01.svg',
-      '/projects/croma/02.svg',
-      '/projects/croma/03.svg',
+      '/projects/engrama/01.jpg',
+      '/projects/engrama/02.jpg',
+      '/projects/engrama/03.jpg',
+      '/projects/engrama/04.jpg',
     ],
   },
   {
