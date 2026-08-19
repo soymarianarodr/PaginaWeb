@@ -16,10 +16,18 @@ export const projects: Project[] = [
   {
     name: 'CICLO',
     slug: 'ciclo',
-    // TODO: descripción provisional — el cliente enviará el texto final.
     description:
-      'Ciclo es el concepto para una tienda de jabones biodegradables, ' +
-      'donde el diseño del espacio acompaña una propuesta consciente con el entorno.',
+      'More than just a biodegradable soap store, Ciclo is conceived as a statement ' +
+      'about space. From the moment you cross the entrance, the design creates an ' +
+      'intuitive and fluid path, a continuous sequence that naturally guides you through ' +
+      'the environment. There are no barriers here: the layout places human interaction ' +
+      'at the center, inviting you to try the full range of products and stop as many ' +
+      'times as you like. That same honesty found in biodegradability is reflected in the ' +
+      'materials. The environment is defined by a raw, structural palette where textured ' +
+      'concrete walls and the sleekness of steel coexist in perfect harmony, only to be ' +
+      'unexpectedly disrupted by a vibrant blue floor that fills every step with energy. ' +
+      'Ciclo does not seek to be a conventional store; it defines itself through the ' +
+      'clarity of its materials, the fluidity of its layout, and, above all, the human experience.',
     images: [
       '/projects/ciclo/01.jpg',
       '/projects/ciclo/02.jpg',
@@ -63,10 +71,18 @@ export const projects: Project[] = [
   {
     name: 'ENGRAMA',
     slug: 'engrama',
-    // TODO: descripción provisional — el cliente enviará el texto final.
     description:
-      'Engrama es un objeto-cápsula pensado para guardar memorias fotográficas, ' +
-      'un dispositivo que convierte los recuerdos en una pieza física para conservar y revisitar.',
+      'Since ancient times, humanity has sought to preserve memories against the passage ' +
+      'of time. Unlike traditional time capsules designed to remain hidden, this collection ' +
+      'offers a dynamic bridge between yesterday and tomorrow: an object designed to blend ' +
+      'into everyday spaces and transcend time through the tangible value of physical ' +
+      'photography. The experience begins when you interact with the briefcase. Conceived ' +
+      'as a protective container, it safeguards a series of meaningful photographs that ' +
+      'encapsulate fundamental experiences. The process is completed by taking out the ' +
+      'printed photographs and placing them inside the integrated picture frame, ' +
+      'transforming the object into a living piece displayed in everyday life. More than a ' +
+      'visual display, the design creates a permanent point of connection with personal ' +
+      'history within the living environment.',
     images: [
       '/projects/engrama/01.jpg',
       '/projects/engrama/02.jpg',

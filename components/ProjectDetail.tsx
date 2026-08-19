@@ -66,7 +66,9 @@ export default function ProjectDetail({ project, layoutId }: ProjectDetailProps)
           </motion.h2>
           <motion.p
             layout
-            className={`${styles.description} ${expanded ? '' : styles.clamped}`}
+            className={`${styles.description} ${
+              expanded ? styles.descriptionExpanded : styles.clamped
+            }`}
           >
             {project.description}
           </motion.p>

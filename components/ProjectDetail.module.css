@@ -50,7 +50,9 @@
 }
 
 .projectName {
-  font-size: var(--fs-button);
+  /* Reducido ~17.5% respecto al mockup (era var(--fs-button) = 20/3.07vw/59),
+     misma proporción que la descripción, por feedback del cliente */
+  font-size: clamp(17px, 2.55vw, 49px);
   text-transform: uppercase;
   color: #fff;
   line-height: 1;
@@ -69,6 +71,33 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Composición fija sin scroll de página: si el texto expandido no cabe entre
+   el borde inferior de la imagen y el tope del área útil, scrollea SOLO dentro
+   del propio bloque, con scrollbar sutil. El alto disponible = alto de la
+   imagen (2vh de padding superior + 12.3vh hasta su borde inferior) menos el
+   espacio reservado para el nombre y el botón "View more". */
+.descriptionExpanded {
+  max-height: calc(100dvh - var(--header-h) - 14.3vh - 6em);
+  overflow-y: auto;
+  padding-right: 0.6em;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+  overscroll-behavior: contain;
+}
+
+.descriptionExpanded::-webkit-scrollbar {
+  width: 6px;
+}
+
+.descriptionExpanded::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 3px;
+}
+
+.descriptionExpanded::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .viewMore {

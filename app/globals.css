@@ -11,7 +11,9 @@
 :root {
   /* Mockup de referencia: lienzo de 67,7cm de ancho → 1cm ≈ 1.477vw */
   --fs-button: clamp(20px, 3.07vw, 59px);
-  --fs-body: clamp(17px, 2.08vw, 40px);
+  /* Descripción de proyecto: reducida ~17.5% respecto al mockup original
+     (clamp 17/2.08vw/40) por feedback del cliente — el texto se veía grande */
+  --fs-body: clamp(14px, 1.73vw, 33px);
 
   /* Margen lateral de página: 6,3cm ≈ 9.3vw — comparten título, botón,
      carrusel y contacto */
