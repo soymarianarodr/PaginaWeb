@@ -35,6 +35,11 @@ export const projects: Project[] = [
       '/projects/ciclo/04.jpg',
       '/projects/ciclo/05.jpg',
       '/projects/ciclo/06.jpg',
+      // Planos/láminas del PDF de presentación original (van al final)
+      '/projects/ciclo/07.jpg',
+      '/projects/ciclo/08.jpg',
+      '/projects/ciclo/09.jpg',
+      '/projects/ciclo/10.jpg',
     ],
   },
   {
@@ -67,6 +72,15 @@ export const projects: Project[] = [
       '/projects/alter-ego/14.jpg',
       '/projects/alter-ego/15.jpg',
       '/projects/alter-ego/16.jpg',
+      // Planos/láminas del PDF de presentación original (van al final)
+      '/projects/alter-ego/17.jpg',
+      '/projects/alter-ego/18.jpg',
+      '/projects/alter-ego/19.jpg',
+      '/projects/alter-ego/20.jpg',
+      '/projects/alter-ego/21.jpg',
+      '/projects/alter-ego/22.jpg',
+      '/projects/alter-ego/23.jpg',
+      '/projects/alter-ego/24.jpg',
     ],
   },
   {
@@ -95,6 +109,11 @@ export const projects: Project[] = [
       '/projects/engrama/07.jpg',
       '/projects/engrama/08.jpg',
       '/projects/engrama/09.jpg',
+      // Planos/láminas del PDF de presentación original (van al final)
+      '/projects/engrama/10.jpg',
+      '/projects/engrama/11.jpg',
+      '/projects/engrama/12.jpg',
+      '/projects/engrama/13.jpg',
     ],
   },
   {
