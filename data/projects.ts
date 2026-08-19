@@ -33,6 +33,8 @@ export const projects: Project[] = [
       '/projects/ciclo/02.jpg',
       '/projects/ciclo/03.jpg',
       '/projects/ciclo/04.jpg',
+      '/projects/ciclo/05.jpg',
+      '/projects/ciclo/06.jpg',
     ],
   },
   {
