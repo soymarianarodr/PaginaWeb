@@ -41,16 +41,15 @@ export const projects: Project[] = [
     name: 'ALTER EGO',
     slug: 'alter-ego',
     description:
-      'Una habitación como la extensión física de una personalidad compleja. ' +
-      'Este espacio explora nuestras propias contradicciones: lo serio y lo divertido, ' +
-      'lo ordenado y lo caótico, lo intelectual y lo emocional. ' +
-      'En Alter Ego conviven las distintas versiones de un mismo ser. ' +
-      'Mientras la crudeza del hormigón representa la estructura y el control, ' +
-      'el color y la selección de piezas de mobiliario revelan un lado más libre, creativo y emocional. ' +
-      'Para materializar esta dualidad, además de las piezas elegidas, ' +
-      'se diseñaron específicamente una serie de detalles a medida con temática de globos. ' +
-      'Estos acentos personalizados se integran al entorno inyectando de forma sutil ' +
-      'esa dosis de juego, ligereza y diversión que completa la identidad de la persona.',
+      'A room as the physical extension of a complex personality. This space explores ' +
+      'our own contradictions: the serious and the playful, the ordered and the chaotic, ' +
+      'the intellectual and the emotional. In Alter Ego, the different versions of a single ' +
+      'self coexist. While the rawness of concrete embodies structure and control, color ' +
+      'and the choice of furniture reveal a freer, more creative and emotional side. ' +
+      'To give form to this duality, beyond the selected pieces, a series of bespoke, ' +
+      'balloon-themed details was designed specifically for the space. These custom accents ' +
+      'blend into the environment, subtly injecting that dose of play, lightness and fun ' +
+      "that completes the person's identity.",
     images: [
       '/projects/alter-ego/01.jpg',
       '/projects/alter-ego/02.jpg',
@@ -71,7 +70,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'ENGRAMA',
+    // Nombre visible "ENGRAM PROJECT"; el slug/carpeta sigue siendo "engrama".
+    name: 'ENGRAM PROJECT',
     slug: 'engrama',
     description:
       'Since ancient times, humanity has sought to preserve memories against the passage ' +
@@ -90,18 +90,33 @@ export const projects: Project[] = [
       '/projects/engrama/02.jpg',
       '/projects/engrama/03.jpg',
       '/projects/engrama/04.jpg',
+      '/projects/engrama/05.jpg',
+      '/projects/engrama/06.jpg',
+      '/projects/engrama/07.jpg',
+      '/projects/engrama/08.jpg',
+      '/projects/engrama/09.jpg',
     ],
   },
   {
     name: 'DARK',
     slug: 'dark',
-    // TODO: descripción provisional — el cliente enviará el texto final.
     description:
-      'Dark es un proyecto de diseño de espacio de atmósfera oscura y envolvente. ' +
-      'Texto provisional a la espera del contenido definitivo del cliente.',
+      'It all begins with a healthy dose of envy between two master minds: Rem Koolhaas ' +
+      'and Dario Argento. From that subtle tension arises a force that takes on a life of ' +
+      'its own, eventually giving rise to an Entity. Bodiless yet surrounded by walls, ' +
+      'this force transforms architecture and the language of cinema into a trap of ' +
+      'surveillance and manipulation directed against its own inhabitants. Here, the house ' +
+      'ceases to be a refuge and becomes a disorienting labyrinth. From the walls, the dark ' +
+      'lenses of security cameras silently record every ounce of fear and anxiety. The ' +
+      "Entity knows everything: it anticipates every move and uses its prey's own obsessions " +
+      'as the script for their nightmare. To inhabit this space is to immerse oneself in a ' +
+      'psychological horror film in real time. A journey through claustrophobic frames and ' +
+      'treacherous shadows that serves as an inescapable path toward your own demise.',
     // Reorden pedido por el cliente: las imágenes 02, 03 y 04 van AL FINAL de la
     // secuencia (02→pos.25, 03→pos.24, 04→pos.23). NO tocar los nombres de archivo:
     // lo que manda es este orden del array. No "corregir" a orden numérico.
+    // Además, esas tres (02/03/04) son justamente los PLANOS (PLANO BASE, cortes,
+    // distribución CCTV), así que este orden también deja los planos al final.
     images: [
       '/projects/dark/01.jpg',
       '/projects/dark/05.jpg',
@@ -131,35 +146,26 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'ÉTER',
-    slug: 'eter',
+    name: 'REWIND',
+    slug: 'rewind',
     description:
-      'Éter es una serie de ilustraciones digitales sobre estados intermedios: ' +
-      'el sueño, la espera, la distancia. ' +
-      'Figuras suspendidas en espacios vacíos, trazadas con línea mínima y grandes campos de negro. ' +
-      'La serie nació como ejercicio diario durante un año y terminó convertida en ' +
-      'una exposición individual y una colaboración con una revista literaria. ' +
-      'Cada pieza se acompaña de un fragmento de texto escrito por la artista.',
+      'In 1977, Studio 54 made history inside a former theater in Manhattan. Its founders, ' +
+      'Steve Rubell and Ian Schrager, along with the design team of Scott Bromley and Ron ' +
+      'Doud, transformed the stage into the dance floor itself, creating a legendary place ' +
+      'of freedom and design. Taking this iconic legacy as a starting point, our project ' +
+      'seeks to revive that vibrant atmosphere. The spatial proposal is developed around a ' +
+      'theatrical aesthetic where wood, metallic finishes, and blue curtain textiles set ' +
+      'the mood, integrated with the lighting and the presence of disco balls above the ' +
+      'dance floor. More than a conventional bar, the venue is conceived as a space to ' +
+      'disconnect from the outside world, enjoy live music, and offer a unique nightlife ' +
+      'experience.',
     images: [
-      '/projects/eter/01.svg',
-      '/projects/eter/02.svg',
-      '/projects/eter/03.svg',
-    ],
-  },
-  {
-    name: 'FLUX',
-    slug: 'flux',
-    description:
-      'Flux es un proyecto de motion design y dirección de arte para música electrónica. ' +
-      'Visuales generativos en tiempo real que responden al audio, proyectados en vivo ' +
-      'en festivales y salas de la escena local. ' +
-      'El sistema combina tipografía en movimiento, glitch controlado y geometría reactiva, ' +
-      'manteniendo el negro como espacio escénico permanente. ' +
-      'Incluye además la identidad visual completa de la serie de eventos.',
-    images: [
-      '/projects/flux/01.svg',
-      '/projects/flux/02.svg',
-      '/projects/flux/03.svg',
+      '/projects/rewind/01.jpg',
+      '/projects/rewind/02.jpg',
+      '/projects/rewind/03.jpg',
+      '/projects/rewind/04.jpg',
+      '/projects/rewind/05.jpg',
+      '/projects/rewind/06.jpg',
     ],
   },
 ];
