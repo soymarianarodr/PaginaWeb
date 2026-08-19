@@ -97,11 +97,11 @@ export const projects: Project[] = [
     description:
       'Dark es un proyecto de diseño de espacio de atmósfera oscura y envolvente. ' +
       'Texto provisional a la espera del contenido definitivo del cliente.',
+    // Reorden pedido por el cliente: las imágenes 02, 03 y 04 van AL FINAL de la
+    // secuencia (02→pos.25, 03→pos.24, 04→pos.23). NO tocar los nombres de archivo:
+    // lo que manda es este orden del array. No "corregir" a orden numérico.
     images: [
       '/projects/dark/01.jpg',
-      '/projects/dark/02.jpg',
-      '/projects/dark/03.jpg',
-      '/projects/dark/04.jpg',
       '/projects/dark/05.jpg',
       '/projects/dark/06.jpg',
       '/projects/dark/07.jpg',
@@ -123,6 +123,9 @@ export const projects: Project[] = [
       '/projects/dark/23.jpg',
       '/projects/dark/24.jpg',
       '/projects/dark/25.jpg',
+      '/projects/dark/04.jpg', // pos.23 (era 04)
+      '/projects/dark/03.jpg', // pos.24 (era 03)
+      '/projects/dark/02.jpg', // pos.25 (era 02)
     ],
   },
   {
