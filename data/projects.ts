@@ -185,6 +185,9 @@ export const projects: Project[] = [
       '/projects/rewind/04.jpg',
       '/projects/rewind/05.jpg',
       '/projects/rewind/06.jpg',
+      // Planos/láminas del PDF de presentación (van al final)
+      '/projects/rewind/07.jpg',
+      '/projects/rewind/08.jpg',
     ],
   },
 ];
