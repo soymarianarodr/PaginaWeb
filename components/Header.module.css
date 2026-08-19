@@ -55,3 +55,10 @@
 .navButton:hover {
   opacity: 0.65;
 }
+
+/* Móvil: header más compacto (mismo título fit-to-width, ancho completo) */
+@media (max-width: 768px) {
+  .header {
+    padding: clamp(14px, 3.5vh, 32px) var(--page-margin) clamp(6px, 2vw, 12px);
+  }
+}

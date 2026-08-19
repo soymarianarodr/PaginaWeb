@@ -1,0 +1,97 @@
+/* Overlay a pantalla completa por debajo del header fijo (z 20) y por encima
+   del feed. El body queda bloqueado mientras está abierto (lo gestiona
+   MobileMain), así que el scroll ocurre dentro de .scroll. */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+.scroll {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  /* el contenido arranca bajo el header fijo global */
+  padding-top: var(--header-h);
+}
+
+.close {
+  display: block;
+  margin: 4vw 5vw 0 auto;
+  color: #fff;
+  opacity: 0.7;
+  text-transform: lowercase;
+  font-size: clamp(14px, 4vw, 20px);
+  letter-spacing: 0.04em;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.name {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: clamp(24px, 8vw, 46px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin: 2vw 5vw 5vw;
+}
+
+/* Slider horizontal con swipe: una imagen a la vez, snap al centro */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  max-height: 55vh;
+  object-fit: contain;
+  display: block;
+}
+
+.counter {
+  text-align: center;
+  color: #fff;
+  opacity: 0.85;
+  font-size: clamp(14px, 4vw, 20px);
+  letter-spacing: 0.1em;
+  margin-top: 4vw;
+}
+
+/* Descripción completa (sin "View more" en móvil): texto corrido, scrollea
+   junto con el resto del contenido del modal */
+.description {
+  color: #fff;
+  font-size: clamp(15px, 4.2vw, 20px);
+  line-height: 1.4;
+  padding: 7vw 5vw 14vw;
+}

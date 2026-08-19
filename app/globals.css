@@ -32,6 +32,14 @@
   --header-h: calc(7vh + 11vw);
 }
 
+/* Móvil: márgenes de página más ajustados para dar más ancho al título,
+   al feed y al contacto. Solo afecta ≤768px; el desktop no cambia. */
+@media (max-width: 768px) {
+  :root {
+    --page-margin: 5vw;
+  }
+}
+
 *,
 *::before,
 *::after {

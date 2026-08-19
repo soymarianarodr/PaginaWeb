@@ -28,3 +28,11 @@
   line-height: 1.05;
   opacity: 0.85;
 }
+
+/* Móvil: reduce el email/alias para que quepan al ancho sin desbordar
+   (word-break ya permite wrap como red de seguridad) */
+@media (max-width: 768px) {
+  .contact {
+    font-size: clamp(17px, 5.5vw, 40px);
+  }
+}

@@ -1,0 +1,46 @@
+/* Feed vertical: scrollea con la ventana bajo el header fijo. El aire arriba
+   y, sobre todo, abajo (30vh) permite que la primera y la última tarjeta
+   alcancen el centro del viewport y lleguen a escala plena. */
+.feed {
+  padding: 6vh 5vw 30vh;
+  display: flex;
+  flex-direction: column;
+  gap: 9vh;
+}
+
+.card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: 0;
+  text-align: center;
+  transform-origin: center center;
+  cursor: pointer;
+}
+
+.media {
+  display: block;
+  width: 100%;
+  /* misma proporción apaisada que la tarjeta del carrusel desktop */
+  aspect-ratio: 17.27 / 11.49;
+  overflow: hidden;
+  background: #111;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.name {
+  display: block;
+  margin-top: 3.5vw;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: clamp(22px, 7vw, 40px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
