@@ -50,6 +50,14 @@ export const projects: Project[] = [
       '/projects/alter-ego/06.jpg',
       '/projects/alter-ego/07.jpg',
       '/projects/alter-ego/08.jpg',
+      '/projects/alter-ego/09.jpg',
+      '/projects/alter-ego/10.jpg',
+      '/projects/alter-ego/11.jpg',
+      '/projects/alter-ego/12.jpg',
+      '/projects/alter-ego/13.jpg',
+      '/projects/alter-ego/14.jpg',
+      '/projects/alter-ego/15.jpg',
+      '/projects/alter-ego/16.jpg',
     ],
   },
   {
@@ -67,19 +75,38 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'DUNAS',
-    slug: 'dunas',
+    name: 'DARK',
+    slug: 'dark',
+    // TODO: descripción provisional — el cliente enviará el texto final.
     description:
-      'Dunas es un ensayo fotográfico realizado en los médanos de Coro. ' +
-      'La serie documenta la geometría cambiante de la arena y su relación con el cuerpo humano, ' +
-      'trabajando con luz natural en los extremos del día. ' +
-      'El resultado es un conjunto de imágenes casi monocromas donde la escala se vuelve ambigua: ' +
-      'lo mínimo parece monumental y lo monumental, íntimo. ' +
-      'El proyecto fue publicado como fotolibro autoeditado de 96 páginas.',
+      'Dark es un proyecto de diseño de espacio de atmósfera oscura y envolvente. ' +
+      'Texto provisional a la espera del contenido definitivo del cliente.',
     images: [
-      '/projects/dunas/01.svg',
-      '/projects/dunas/02.svg',
-      '/projects/dunas/03.svg',
+      '/projects/dark/01.jpg',
+      '/projects/dark/02.jpg',
+      '/projects/dark/03.jpg',
+      '/projects/dark/04.jpg',
+      '/projects/dark/05.jpg',
+      '/projects/dark/06.jpg',
+      '/projects/dark/07.jpg',
+      '/projects/dark/08.jpg',
+      '/projects/dark/09.jpg',
+      '/projects/dark/10.jpg',
+      '/projects/dark/11.jpg',
+      '/projects/dark/12.jpg',
+      '/projects/dark/13.jpg',
+      '/projects/dark/14.jpg',
+      '/projects/dark/15.jpg',
+      '/projects/dark/16.jpg',
+      '/projects/dark/17.jpg',
+      '/projects/dark/18.jpg',
+      '/projects/dark/19.jpg',
+      '/projects/dark/20.jpg',
+      '/projects/dark/21.jpg',
+      '/projects/dark/22.jpg',
+      '/projects/dark/23.jpg',
+      '/projects/dark/24.jpg',
+      '/projects/dark/25.jpg',
     ],
   },
   {
