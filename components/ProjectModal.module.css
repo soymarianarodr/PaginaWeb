@@ -20,27 +20,43 @@
   padding-top: var(--header-h);
 }
 
+/* Cierre = misma X del lightbox desktop, arriba a la derecha del modal, por
+   debajo del header fijo y siempre visible (no scrollea con el contenido).
+   Área táctil de 44x44px. */
 .close {
-  display: block;
-  margin: 4vw 5vw 0 auto;
+  position: absolute;
+  top: calc(var(--header-h) + 2vw);
+  right: 3vw;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
-  opacity: 0.7;
-  text-transform: lowercase;
-  font-size: clamp(14px, 4vw, 20px);
-  letter-spacing: 0.04em;
+  opacity: 0.5;
   padding: 0;
   transition: opacity 0.2s;
 }
 
-.close:hover {
+.close:hover,
+.close:focus-visible,
+.close:active {
   opacity: 1;
+}
+
+.close svg {
+  display: block;
+  width: 22px;
+  height: 22px;
 }
 
 .name {
   text-align: center;
   color: #fff;
   text-transform: uppercase;
-  font-size: clamp(24px, 8vw, 46px);
+  /* mismo tamaño que el botón CONTACT/PROJECT (referencia exacta del cliente) */
+  font-size: var(--nav-button-size, 1.75vw);
   line-height: 1;
   letter-spacing: -0.01em;
   margin: 2vw 5vw 5vw;
@@ -87,11 +103,13 @@
   margin-top: 4vw;
 }
 
-/* Descripción completa (sin "View more" en móvil): texto corrido, scrollea
-   junto con el resto del contenido del modal */
+/* Descripción completa (sin "View more" en móvil): texto corrido, centrado
+   (coherente con nombre y contador) y reducido ~17% respecto al tamaño previo
+   (era clamp 15/4.2vw/20) por feedback del cliente. Scrollea con el modal. */
 .description {
   color: #fff;
-  font-size: clamp(15px, 4.2vw, 20px);
+  text-align: center;
+  font-size: clamp(13px, 3.5vw, 17px);
   line-height: 1.4;
   padding: 7vw 5vw 14vw;
 }

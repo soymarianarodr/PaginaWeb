@@ -27,6 +27,12 @@
   text-transform: uppercase;
   line-height: 1.05;
   opacity: 0.85;
+  word-break: break-word;
+  transition: opacity 0.2s;
+}
+
+.alias:hover {
+  opacity: 1;
 }
 
 /* Móvil: reduce el email/alias para que quepan al ancho sin desbordar

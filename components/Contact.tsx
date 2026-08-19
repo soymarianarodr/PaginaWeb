@@ -13,7 +13,15 @@ export default function Contact() {
       >
         MARIANACRODRIGUEZ@GMAIL.COM
       </a>
-      <p className={styles.alias}>MARIROXX..</p>
+      <a
+        className={styles.alias}
+        href="https://rodriguezmariana.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visitar rodriguezmariana.com"
+      >
+        RODRIGUEZMARIANA.COM
+      </a>
     </section>
   );
 }

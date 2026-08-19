@@ -37,11 +37,21 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       exit={{ y: '100%' }}
       transition={{ duration: 0.35, ease: [0.25, 0.8, 0.25, 1] }}
     >
-      <div className={styles.scroll}>
-        <button className={styles.close} onClick={onClose} aria-label="Cerrar proyecto">
-          (close)
-        </button>
+      {/* X igual a la del lightbox desktop; fuera de .scroll para quedar
+          siempre visible arriba a la derecha, bajo el header fijo */}
+      <button className={styles.close} onClick={onClose} aria-label="Cerrar proyecto">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path
+            d="M6 6 L26 26 M26 6 L6 26"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+          />
+        </svg>
+      </button>
 
+      <div className={styles.scroll}>
         <h2 className={styles.name}>{project.name}</h2>
 
         <div

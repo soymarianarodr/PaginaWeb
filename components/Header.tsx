@@ -70,6 +70,18 @@ export default function Header({ label, onNavClick }: HeaderProps) {
     return () => observer.disconnect();
   }, []);
 
+  // Publica el tamaño exacto del botón CONTACT/PROJECT como --nav-button-size;
+  // en móvil los nombres de proyecto (feed y modal) lo reutilizan para quedar
+  // al mismo tamaño que el botón, como pidió el cliente.
+  useEffect(() => {
+    if (titleSize) {
+      document.documentElement.style.setProperty(
+        '--nav-button-size',
+        `${titleSize * BUTTON_RATIO}px`,
+      );
+    }
+  }, [titleSize]);
+
   return (
     <header ref={headerRef} className={styles.header}>
       <div ref={innerRef} className={styles.inner}>
